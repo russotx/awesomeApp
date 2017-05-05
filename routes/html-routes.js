@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     if (req.user) {
       res.redirect("/dashboard");
     }
-  res.render('index', { title: 'Login' });
+  res.render('landing', { title: 'Login' });
 });
 
 router.get('/signup', function(req, res, next) {
