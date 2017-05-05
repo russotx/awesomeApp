@@ -20,6 +20,9 @@
     <!-- Custom CSS for landing page -->
     <link href="public/stylesheets/landing-page.css" rel="stylesheet">
 
+    <!-- Our CSS file to override Bootstrap CSS -->
+    <link href="public/stylesheets/style.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -79,11 +82,16 @@
                         <h1>SyllaCode</h1>
                         <h3>Your Path to Coding Success</h3>
                         <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li> 
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Log In</span></a>
-                            </li>
-                        </ul>
+                        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
                     </div>
                 </div>
             </div>

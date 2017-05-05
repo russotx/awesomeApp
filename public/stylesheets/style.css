@@ -6,3 +6,21 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* this adjusts width of input field for email and password log-in on front page
+   and adjusts position of input fields to center of screen */
+.form-control {
+	position: relative;
+	left: 50%;
+	width: 30%;
+	transform: translateX(-50%);
+}
+/* text color for message that says we will never share user's email*/
+#emailHelp {
+	color: white;
+
+}
+/* dividing line between front page image and email log-in*/
+.intro-divider {
+	width: 50%;
+}
