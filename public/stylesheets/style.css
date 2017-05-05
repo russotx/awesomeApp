@@ -15,6 +15,7 @@ a {
 	width: 30%;
 	transform: translateX(-50%);
 }
+
 /* text color for message that says we will never share user's email*/
 #emailHelp {
 	color: white;
