@@ -8,13 +8,14 @@ router.get('/', function(req, res, next) {
     if (req.user) {
       res.redirect("/dashboard");
     }
-  res.render('login', { title: 'Login' });
+  res.render('landing', { title: 'Login' });
 });
 
 router.get('/signup', function(req, res, next) {
   res.render('signup', { title: 'Sign Up' });
 });
 
+// If authenticated, dashboard will be rendered
  router.get('/dashboard', isAuthenticated , function(req, res) {
   res.render('dashboard', { title: 'Dashboard'})
  });
