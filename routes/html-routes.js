@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+// var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -16,7 +16,7 @@ router.get('/signup', function(req, res, next) {
 });
 
 // If authenticated, dashboard will be rendered
- router.get('/dashboard', isAuthenticated , function(req, res) {
+ router.get('/dashboard', function(req, res) {  //took out isAuthenticated for now
   res.render('dashboard', { title: 'Dashboard'})
  });
 
