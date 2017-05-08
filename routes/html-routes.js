@@ -20,4 +20,12 @@ router.get('/signup', function(req, res, next) {
   res.render('dashboard', { title: 'Dashboard'})
  });
 
+ // define the about route
+router.get('/flot', function (req, res) {
+  res.send('');
+});
+
+
+
+
 module.exports = router;
