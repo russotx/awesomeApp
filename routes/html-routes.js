@@ -1,23 +1,28 @@
 var express = require('express');
 var router = express.Router();
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+var passport = require("../config/passport");
+
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-	// If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/dashboard");
-    }
-  res.render('landing', { title: 'Login' });
+router.get('/', function(req, res) {
+	res.render('landing', { title: 'Login' });
 });
 
-router.get('/signup', function(req, res, next) {
-  res.render('signup', { title: 'Sign Up' });
+
+
+router.get('/signup', function(req, res) {
+  	res.render('signup', { title: 'signup' });
 });
+
 
 // If authenticated, dashboard will be rendered
- router.get('/dashboard', isAuthenticated , function(req, res) {
-  res.render('dashboard', { title: 'Dashboard'})
+router.get('/dashboard', isAuthenticated, function(req, res) {
+		var x = JSON.stringify(req.user)
+	    res.render('dashboard', { title: x});
+	    console.log('ACCESS GRANTED FOR '+req.user.email);
  });
+
 
 module.exports = router;

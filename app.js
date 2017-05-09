@@ -4,15 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('./config/passport');
+var session = require("express-session");
 
 
-var index = require('./routes/html-routes');
-var users = require('./routes/api-routes');
 
 var app = express();
-
-// Setting up port and requiring models for syncing
-// var PORT = process.env.PORT || 8080;
 
 // view engine setup
 var exphbs = require("express-handlebars");
@@ -27,10 +24,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+var htmlR = require('./routes/html-routes');
+var apiR = require('./routes/api-routes');
 
 
-console.log("")
+
+app.use('/', htmlR);
+app.use('/', apiR);
+
+
 
 module.exports = app;
