@@ -20,7 +20,7 @@ var router = express.Router();
     db.User.create({
       email: req.body.email,
       password: req.body.password
-    })then(function() {
+    }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
       res.json(err);

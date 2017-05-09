@@ -1,10 +1,12 @@
 $(document).ready(function() {
-  // Getting references to our form and inputs
-  var emailInput = $("#exampleInputEmail1");
-  var passwordInput = $("#exampleInputPassword1");
-
+  console.log("signup.js");
 
   $(document).on("keydown",function(e){
+
+
+
+  var emailInput = $("#signUpEmail");
+  var passwordInput = $("#signUpPassword");
 
    var keyCode = e.which || e.keyCode;
    if(keyCode == 13) // enter key code
@@ -23,7 +25,7 @@ $(document).ready(function() {
     }
 
     // If we have an email and password we run the loginUser function and clear the form
-    loginUser(userData.email, userData.password);
+    signUpUser(userData.email, userData.password);
     emailInput.val("");
     passwordInput.val("");
 
@@ -33,7 +35,7 @@ $(document).ready(function() {
 
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
-  function loginUser(email, password) {
+  function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
       password: password
