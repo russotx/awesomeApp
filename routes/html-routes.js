@@ -18,10 +18,12 @@ router.get('/signup', function(req, res) {
 
 
 // If authenticated, dashboard will be rendered
+
 router.get('/dashboard', isAuthenticated, function(req, res) {
 		var x = JSON.stringify(req.user)
 	    res.render('dashboard', { title: x});
 	    console.log('ACCESS GRANTED FOR '+req.user.email);
+
  });
 
 
