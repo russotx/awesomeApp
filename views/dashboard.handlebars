@@ -223,7 +223,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
@@ -294,7 +294,7 @@
                         <a href="tables.html"><i class="fa fa-table fa-fw"></i>Tables</a>
                     </li>
                     <li>
-                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Forms</a>
+                        <a href="/forms"><i class="fa fa-edit fa-fw"></i>Forms</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
@@ -380,8 +380,8 @@
                 <!-- Welcome -->
                 <div class="col-lg-12">
                     <div class="alert alert-info">
-                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b>Jonny Deen </b>
- <i class="fa  fa-pencil"></i><b>&nbsp;2,000 </b>Support Tickets Pending to Answere. nbsp;
+                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back! <b></b>
+ 
                     </div>
                 </div>
                 <!--end  Welcome -->
@@ -390,204 +390,176 @@
 
             <div class="row">
                 <!--quick info section -->
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="alert alert-danger text-center">
-                        <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b>Meetings Sheduled This Month
+                        <i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;Resources
 
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="alert alert-success text-center">
-                        <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b>Profit Recorded in This Month  
+                        <i class="fa fa-road fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;Paths 
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="alert alert-info text-center">
-                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> New Subscribers This Year
+                        <i class="fa fa-calendar fa-3x"></i>&nbsp;&nbsp;Events
 
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="alert alert-warning text-center">
-                        <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Payment Dues For Rejected Items
                     </div>
                 </div>
                 <!--end quick info section -->
             </div>
 
             <div class="row">
-                <div class="col-lg-8">
-
-
-
+                <div class="col-lg-4">
                     <!--Area chart example -->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Area Chart Example
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
-                                        </li>
-                                        <li><a href="#">Another action</a>
-                                        </li>
-                                        <li><a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <i class="fa fa-plus fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;Add a Resource
+                            
                         </div>
+                        <br>
+                        {{!-- <div class="container"> --}}
+  <form>
+    <div class="form-group row">
+      <label for="inputTitle" class="col-sm-2 col-form-label">&nbsp;Title</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="inputTitle" placeholder="Title">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputLink" class="col-sm-2 col-form-label">&nbsp;Link</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="inputLink" placeholder="http://">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputTags" class="col-sm-2 col-form-label">&nbsp;Tags</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="inputTags" placeholder="Tags">
+      </div>
+    </div>
+      <div class="form-group row">
+        <label for="exampleSelect1" class="col-sm-2 col-form-label">&nbsp;Difficulty</label>
 
-                        <div class="panel-body">
-                            <div id="morris-area-chart"></div>
-                        </div>
+            <select class="form-control" id="difficulty">
 
-                    </div>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+       </select>
+      </div>
+    </div>   
+   </form>
+            
                     <!--End area chart example -->
-                    <!--Simple table example -->
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Simple Table Example
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
-                                        </li>
-                                        <li><a href="#">Another action</a>
-                                        </li>
-                                        <li><a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered table-hover table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Date</th>
-                                                    <th>Time</th>
-                                                    <th>Amount</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>3326</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:29 PM</td>
-                                                    <td>$321.33</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3325</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:20 PM</td>
-                                                    <td>$234.34</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3324</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:03 PM</td>
-                                                    <td>$724.17</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3323</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:00 PM</td>
-                                                    <td>$23.71</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3322</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>2:49 PM</td>
-                                                    <td>$8345.23</td>
-                                                </tr>
-
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
+                   
                     <!--End simple table example -->
 
-                </div>
+               </div>
 
                 <div class="col-lg-4">
                     <div class="panel panel-primary text-center no-boder">
                         <div class="panel-body yellow">
                             <i class="fa fa-bar-chart-o fa-3x"></i>
-                            <h3>20,741 </h3>
+                            <h3>CSS </h3>
                         </div>
-                        <div class="panel-footer">
-                            <span class="panel-eyecandy-title">Daily User Visits
-                            </span>
-                        </div>
+                        
                     </div>
                     <div class="panel panel-primary text-center no-boder">
                         <div class="panel-body blue">
                             <i class="fa fa-pencil-square-o fa-3x"></i>
-                            <h3>2,060 </h3>
+                            <h3>HTML</h3>
                         </div>
-                        <div class="panel-footer">
-                            <span class="panel-eyecandy-title">Pending Orders Found
-                            </span>
-                        </div>
+                        
                     </div>
                     <div class="panel panel-primary text-center no-boder">
                         <div class="panel-body green">
                             <i class="fa fa fa-floppy-o fa-3x"></i>
-                            <h3>20 GB</h3>
+                            <h3>Javascript</h3>
                         </div>
-                        <div class="panel-footer">
-                            <span class="panel-eyecandy-title">New Data Uploaded
-                            </span>
-                        </div>
+                        
                     </div>
                     <div class="panel panel-primary text-center no-boder">
                         <div class="panel-body red">
                             <i class="fa fa-thumbs-up fa-3x"></i>
-                            <h3>2,700 </h3>
+                            <h3>Node.js</h3>
                         </div>
-                        <div class="panel-footer">
-                            <span class="panel-eyecandy-title">New User Registered
-                            </span>
-                        </div>
+                        
                     </div>
-
-
-
-
-
 
 
                 </div>
 
-            </div>
+            
+
+            <div class="col-lg-4">
+                
+                <h2 class="text-center">Weekly Planner</h2>
+      <div id="dialog" title="Add Topic">
+  <form>
+<input id="userTopic" type="text"></input>  
+  <fieldset>
+    <legend>Select days:</legend>
+    <label class="days-label" for="checkbox-1">Sunday</label>
+    <input class="days" type="checkbox" value="sunday" id="checkbox-1">
+    <label class="days-label" for="checkbox-2">Monday</label>
+    <input class="days" type="checkbox" value="monday" id="checkbox-2">
+    <label class="days-label" for="checkbox-3">Tuesday</label>
+    <input class="days" type="checkbox" value="tuesday" id="checkbox-3">
+    <label class="days-label" for="checkbox-4">Wednesday</label>
+    <input class="days" type="checkbox" value="wednesday" id="checkbox-4">
+    <label class="days-label" for="checkbox-5">Thursday</label>
+    <input class="days" type="checkbox" value="thursday" id="checkbox-5">
+    <label class="days-label" for="checkbox-6">Friday</label>
+    <input class="days" type="checkbox" value="friday" id="checkbox-6">
+    <label class="days-label"  for="checkbox-7">Saturday</label>
+    <input class="days" type="checkbox" value="saturday" id="checkbox-7">
+  </fieldset>
+<input id="submit" type="submit">
+</form>
+</div>
+
+
+
+<div id="accordion">
+  <h3>Sunday</h3>
+  <div>
+    
+  </div>
+  <h3>Monday</h3>
+  <div>
+    
+  </div>
+  <h3>Tuesday</h3>
+  <div>
+    
+  </div>
+  <h3>Wednesday</h3>
+  <div>
+    
+  </div>
+  <h3>Thursday</h3>
+  <div>
+    
+  </div>
+  <h3>Friday</h3>
+  <div>
+    
+  </div>
+  <h3>Saturday</h3>
+  <div>
+    
+  </div>
+</div>
+<br><br>
+<button id="opener" class="btn btn-primary">Add Topic</button>
+    </div>
+   </div>
+
+
 
             <div class="row">
                 <div class="col-lg-4">

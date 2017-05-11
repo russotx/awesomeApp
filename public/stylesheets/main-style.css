@@ -87,8 +87,8 @@ padding: 20px 15px;
 
   /* No border */
 .no-boder {
-    border:0px solid #5bc0de !important;
-}
+    border:0px solid #5bc0de !important; 
+ }
 /* tap nvbar Section */
 
 #navbar {
