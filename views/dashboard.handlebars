@@ -1,28 +1,34 @@
-<div id="wrapper">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!-- navbar top -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <!-- navbar-header -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/dashboard">SyllaCode</a>
+                <a class="navbar-brand" href="index.html">
+                    <h1>SyllaCode</h1>
+                </a>
             </div>
-            <!-- /.navbar-header -->
-
+            <!-- end navbar-header -->
+            <!-- navbar-top-links -->
             <ul class="nav navbar-top-links navbar-right">
+                <!-- main dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
                     </a>
+                    <!-- dropdown-messages -->
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong><span class=" label label-danger">Andrew Smith</span></strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
@@ -34,7 +40,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong><span class=" label label-info">Jonney Depp</span></strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
@@ -46,7 +52,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong><span class=" label label-success">Jonney Depp</span></strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
@@ -62,13 +68,14 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-messages -->
+                    <!-- end dropdown-messages -->
                 </li>
-                <!-- /.dropdown -->
+
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
                     </a>
+                    <!-- dropdown tasks -->
                     <ul class="dropdown-menu dropdown-tasks">
                         <li>
                             <a href="#">
@@ -141,18 +148,19 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-tasks -->
+                    <!-- end dropdown-tasks -->
                 </li>
-                <!-- /.dropdown -->
+
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <span class="top-label label label-warning">5</span>  <i class="fa fa-bell fa-3x"></i>
                     </a>
+                    <!-- dropdown alerts-->
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <i class="fa fa-comment fa-fw"></i>New Comment
                                     <span class="pull-right text-muted small">4 minutes ago</span>
                                 </div>
                             </a>
@@ -161,7 +169,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
                                     <span class="pull-right text-muted small">12 minutes ago</span>
                                 </div>
                             </a>
@@ -170,7 +178,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
                                     <span class="pull-right text-muted small">4 minutes ago</span>
                                 </div>
                             </a>
@@ -179,7 +187,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <i class="fa fa-tasks fa-fw"></i>New Task
                                     <span class="pull-right text-muted small">4 minutes ago</span>
                                 </div>
                             </a>
@@ -188,7 +196,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
                                     <span class="pull-right text-muted small">4 minutes ago</span>
                                 </div>
                             </a>
@@ -201,291 +209,221 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-alerts -->
+                    <!-- end dropdown-alerts -->
                 </li>
-                <!-- /.dropdown -->
+
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-3x"></i>
                     </a>
+                    <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
+                    <!-- end dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
+                <!-- end main dropdown -->
             </ul>
-            <!-- /.navbar-top-links -->
+            <!-- end navbar-top-links -->
 
-           
+        </nav>
+        <!-- end navbar top -->
 
+        <!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse">
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <!-- user image section-->
+                        <div class="user-section">
+                            <div class="user-section-inner">
+                                <img src="images/user.jpg" alt="Picture of you">
+                            </div>
+                            <div class="user-info">
+                    
+                                <h4> {{email}}</h4>
+                                <h5> Member since {{date}}</h5>
+                                           
+                
+                                <div class="user-text-online">
+                                    <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
+                                </div>
+                            </div>
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    <li class="sidebar-search">
+                        <!-- search section-->
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <!--end search section-->
+                    </li>
+                    <li class="selected">
+                        <a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="flot.html">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="morris.html">Morris Charts</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                     <li>
+                        <a href="timeline.html"><i class="fa fa-flask fa-fw"></i>Timeline</a>
+                    </li>
+                    <li>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i>Tables</a>
+                    </li>
+                    <li>
+                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Forms</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="panels-wells.html">Panels and Wells</a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="notifications.html">Notifications</a>
+                            </li>
+                            <li>
+                                <a href="typography.html">Typography</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">Grid</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                </ul>
+                                <!-- third-level-items -->
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>Sample Pages<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="blank.html">Blank Page</a>
+                            </li>
+                            <li>
+                                <a href="login.html">Login Page</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+        </nav>
+        <!-- end navbar side -->
+        <!--  page-wrapper -->
         <div id="page-wrapper">
+
             <div class="row">
+                <!-- Page Header -->
                 <div class="col-lg-12">
                     <h1 class="page-header">Dashboard</h1>
-                    <h2> Welcome back {{email}}!</h2>
-                    <h2> You've been a user since {{date}}</h2>
                 </div>
-                <!-- /.col-lg-12 -->
-            </div>
-           
-
-              <div class="container-fluid">
-                 <div class="row">
-                     <div class="col-lg-3">
-                        <h2 style="text-align: center;">Resources</h2>
-        <!-- Info Card -->
-                            <div class="info-card">
-                                <div class="front">
-                            <h3>Mongo DB</h3>
-                        </div>
-            <div class="back">
-                <h2>No SQL. No problem.</h2>
-                <p>
-                    MongoDB is the database for today's applications, enabling you to:<br>
-
-Leverage data and technology to maximize competitive advantage
-
-Reduce risk for mission-critical deployments
-
-Accelerate time-to-value
-
-Dramatically lower total cost of ownership
-
-With MongoDB, you can build applications that were never possible with traditional relational databases. Here's how.<br>
-
-Fast, Iterative Development. Scope creep and changing business requirements no longer stand between you and successful project delivery. A flexible data model coupled with dynamic schema and idiomatic drivers make it fast for developers to build and evolve applications. Automated provisioning and management enable continuous integration and highly productive operations. Contrast this against static relational schemas and complex operations that have hindered you in the past.
-Flexible Data Model. MongoDB's document data model makes it easy for you to store and combine data of any structure, without giving up sophisticated validation rules, data access and rich indexing functionality. You can dynamically modify the schema without downtime. You spend less time prepping your data for the database, and more time putting your data to work.
-Multi-Datacenter Scalability. MongoDB can be scaled within and across geographically distributed data centers, providing new levels of availability and scalability. As your deployments grow in terms of data volume and throughput, MongoDB scales easily with no downtime, and without changing your application. And as your availability and recovery goals evolve, MongoDB lets you adapt flexibly, across data centers, with tunable consistency.
-Integrated Feature Set. Analytics and data visualization, text search, graph processing, geospatial, in-memory performance and global replication allow you to deliver a wide variety of real-time applications on one technology, reliably and securely. RDBMS systems require additional, complex technologies demanding separate integration overhead and expense to do this well.
-Lower TCO. Application development teams are more productive when they use MongoDB. Single click management means operations teams are as well. MongoDB runs on commodity hardware, dramatically lowering costs. Finally, MongoDB offers affordable annual subscriptions, including 24x7x365 global support. Your applications can be one tenth the cost to deliver compared to using a relational database.
-Long-Term Commitment. MongoDB Inc and the MongoDB ecosystem stand behind the world's fastest-growing database. 20M+ downloads and 2,000+ customers including more than 50% of the Fortune 100. Over 1,000 partners and greater investor funding than any other database in history. You can be sure your investment is protected.
-                </p>
-                
-            </div>
-        </div>
-     </div>
-  
-    
-        <div class="col-lg-3">
-          </div>
-            <div class="col-lg-3">
+                <!--End Page Header -->
             </div>
 
+            <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12">
+                    <div class="alert alert-info">
+                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b>Jonny Deen </b>
+ <i class="fa  fa-pencil"></i><b>&nbsp;2,000 </b>Support Tickets Pending to Answere. nbsp;
+                    </div>
+                </div>
+                <!--end  Welcome -->
+            </div>
+
+
+            <div class="row">
+                <!--quick info section -->
                 <div class="col-lg-3">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-calendar fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"></div>
-                                    <div>Calendar</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Planner</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
+                    <div class="alert alert-danger text-center">
+                        <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b>Meetings Sheduled This Month
+
                     </div>
                 </div>
-           </div>
-
-
-        <!-- Scrolling enabled for longer content -->
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="info-card">
-           <div class="front">
-                    <h3>Express</h3>
-                </div>
-            <div class="back">
-                <h2>Routes are cool</h2>
-                <p>
-                   Express 3.x is a light-weight web application framework to help organize your web application into an MVC architecture on the server side. You can use a variety of choices for your templating language (like EJS, Jade, and Dust.js).<br>
-
-You can then use a database like MongoDB with Mongoose (for modeling) to provide a backend for your Node.js application. Express.js basically helps you manage everything, from routes, to handling requests and views. 
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-  <div class="col-lg-3">
-          </div>
-            <div class="col-lg-3">
-            </div>
-
                 <div class="col-lg-3">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-github fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"></div>
-                                    <div>GitHub</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
+                    <div class="alert alert-success text-center">
+                        <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b>Profit Recorded in This Month  
                     </div>
                 </div>
-            </div>
+                <div class="col-lg-3">
+                    <div class="alert alert-info text-center">
+                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> New Subscribers This Year
 
-
-<div class="row">
-    <div class="col-lg-3">
-        <div class="info-card">
-                <div class="front">
-                    <h3>Javascript</h3>
-                </div>
-            <div class="back">
-                <h2>For websites and so much more</h2>
-                <p>
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-lg-3">
-        </div>
-    <div class="col-lg-3">
-         </div>
-
-  <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-stack-overflow fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"></div>
-                                    <div>Stack Overflow</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
                     </div>
                 </div>
+                <div class="col-lg-3">
+                    <div class="alert alert-warning text-center">
+                        <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Payment Dues For Rejected Items
+                    </div>
+                </div>
+                <!--end quick info section -->
             </div>
-       
-<br><br><br><br>
 
-  <div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Text</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-search-input" class="col-2 col-form-label">Search</label>
-  <div class="col-10">
-    <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-email-input" class="col-2 col-form-label">Email</label>
-  <div class="col-10">
-    <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-url-input" class="col-2 col-form-label">URL</label>
-  <div class="col-10">
-    <input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
-  <div class="col-10">
-    <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-password-input" class="col-2 col-form-label">Password</label>
-  <div class="col-10">
-    <input class="form-control" type="password" value="hunter2" id="example-password-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-number-input" class="col-2 col-form-label">Number</label>
-  <div class="col-10">
-    <input class="form-control" type="number" value="42" id="example-number-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
-  <div class="col-10">
-    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-date-input" class="col-2 col-form-label">Date</label>
-  <div class="col-10">
-    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-month-input" class="col-2 col-form-label">Month</label>
-  <div class="col-10">
-    <input class="form-control" type="month" value="2011-08" id="example-month-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-week-input" class="col-2 col-form-label">Week</label>
-  <div class="col-10">
-    <input class="form-control" type="week" value="2011-W33" id="example-week-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-time-input" class="col-2 col-form-label">Time</label>
-  <div class="col-10">
-    <input class="form-control" type="time" value="13:45:00" id="example-time-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-color-input" class="col-2 col-form-label">Color</label>
-  <div class="col-10">
-    <input class="form-control" type="color" value="#563d7c" id="example-color-input">
-  </div>
-</div>
-
-            
-            <br><br><br><br><br>
-  </div>              
-            <!-- /.row -->
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="panel panel-default">
+
+
+
+                    <!--Area chart example -->
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Area Chart Example
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -506,16 +444,17 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                 </div>
                             </div>
                         </div>
-                        <!-- /.panel-heading -->
+
                         <div class="panel-body">
                             <div id="morris-area-chart"></div>
                         </div>
-                        <!-- /.panel-body -->
+
                     </div>
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
+                    <!--End area chart example -->
+                    <!--Simple table example -->
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Simple Table Example
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -536,10 +475,10 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                 </div>
                             </div>
                         </div>
-                        <!-- /.panel-heading -->
+
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-12">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
@@ -581,228 +520,154 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                                     <td>2:49 PM</td>
                                                     <td>$8345.23</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>3321</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>2:23 PM</td>
-                                                    <td>$245.12</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3320</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>2:15 PM</td>
-                                                    <td>$5663.54</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3319</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>2:13 PM</td>
-                                                    <td>$943.45</td>
-                                                </tr>
+
+
                                             </tbody>
                                         </table>
                                     </div>
-                                    <!-- /.table-responsive -->
+
                                 </div>
-                                <!-- /.col-lg-4 (nested) -->
-                                <div class="col-lg-8">
-                                    <div id="morris-bar-chart"></div>
-                                </div>
-                                <!-- /.col-lg-8 (nested) -->
+
                             </div>
                             <!-- /.row -->
                         </div>
                         <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <ul class="timeline">
-                                <li>
-                                    <div class="timeline-badge"><i class="fa fa-check"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small>
-                                            </p>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="timeline-inverted">
-                                    <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="timeline-inverted">
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias sapiente rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut debitis!</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-badge info"><i class="fa fa-save"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
-                                            <hr>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                                    <i class="fa fa-gear"></i> <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#">Action</a>
-                                                    </li>
-                                                    <li><a href="#">Another action</a>
-                                                    </li>
-                                                    <li><a href="#">Something else here</a>
-                                                    </li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="#">Separated link</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="timeline-inverted">
-                                    <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                    <!--End simple table example -->
+
                 </div>
-                <!-- /.col-lg-8 -->
+
                 <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                    <div class="panel panel-primary text-center no-boder">
+                        <div class="panel-body yellow">
+                            <i class="fa fa-bar-chart-o fa-3x"></i>
+                            <h3>20,741 </h3>
                         </div>
-                        <!-- /.panel-heading -->
+                        <div class="panel-footer">
+                            <span class="panel-eyecandy-title">Daily User Visits
+                            </span>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary text-center no-boder">
+                        <div class="panel-body blue">
+                            <i class="fa fa-pencil-square-o fa-3x"></i>
+                            <h3>2,060 </h3>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="panel-eyecandy-title">Pending Orders Found
+                            </span>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary text-center no-boder">
+                        <div class="panel-body green">
+                            <i class="fa fa fa-floppy-o fa-3x"></i>
+                            <h3>20 GB</h3>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="panel-eyecandy-title">New Data Uploaded
+                            </span>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary text-center no-boder">
+                        <div class="panel-body red">
+                            <i class="fa fa-thumbs-up fa-3x"></i>
+                            <h3>2,700 </h3>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="panel-eyecandy-title">New User Registered
+                            </span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- Notifications-->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i>Notifications Panel
+                        </div>
+
                         <div class="panel-body">
                             <div class="list-group">
                                 <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <i class="fa fa-comment fa-fw"></i>New Comment
                                     <span class="pull-right text-muted small"><em>4 minutes ago</em>
                                     </span>
                                 </a>
                                 <a href="#" class="list-group-item">
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
                                     <span class="pull-right text-muted small"><em>12 minutes ago</em>
                                     </span>
                                 </a>
                                 <a href="#" class="list-group-item">
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
                                     <span class="pull-right text-muted small"><em>27 minutes ago</em>
                                     </span>
                                 </a>
                                 <a href="#" class="list-group-item">
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <i class="fa fa-tasks fa-fw"></i>New Task
                                     <span class="pull-right text-muted small"><em>43 minutes ago</em>
                                     </span>
                                 </a>
                                 <a href="#" class="list-group-item">
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
                                     <span class="pull-right text-muted small"><em>11:32 AM</em>
                                     </span>
                                 </a>
                                 <a href="#" class="list-group-item">
-                                    <i class="fa fa-bolt fa-fw"></i> Server Crashed!
+                                    <i class="fa fa-bolt fa-fw"></i>Server Crashed!
                                     <span class="pull-right text-muted small"><em>11:13 AM</em>
                                     </span>
                                 </a>
                                 <a href="#" class="list-group-item">
-                                    <i class="fa fa-warning fa-fw"></i> Server Not Responding
+                                    <i class="fa fa-warning fa-fw"></i>Server Not Responding
                                     <span class="pull-right text-muted small"><em>10:57 AM</em>
                                     </span>
                                 </a>
                                 <a href="#" class="list-group-item">
-                                    <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
+                                    <i class="fa fa-shopping-cart fa-fw"></i>New Order Placed
                                     <span class="pull-right text-muted small"><em>9:49 AM</em>
                                     </span>
                                 </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-money fa-fw"></i> Payment Received
-                                    <span class="pull-right text-muted small"><em>Yesterday</em>
-                                    </span>
-                                </a>
+
                             </div>
                             <!-- /.list-group -->
                             <a href="#" class="btn btn-default btn-block">View All Alerts</a>
                         </div>
-                        <!-- /.panel-body -->
+
                     </div>
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
+                    <!--End Notifications-->
+                </div>
+                <div class="col-lg-4">
+                    <!-- Donut Example-->
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Donut Chart Example
                         </div>
                         <div class="panel-body">
                             <div id="morris-donut-chart"></div>
                             <a href="#" class="btn btn-default btn-block">View Details</a>
                         </div>
-                        <!-- /.panel-body -->
+
                     </div>
-                    <!-- /.panel -->
-                    <div class="chat-panel panel panel-default">
+                    <!--End Donut Example-->
+                </div>
+                <div class="col-lg-4">
+                    <!-- Chat Panel Example-->
+                    <div class="chat-panel panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-comments fa-fw"></i> Chat
+                            <i class="fa fa-comments fa-fw"></i>
+                            Chat
                             <div class="btn-group pull-right">
                                 <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-chevron-down"></i>
@@ -810,34 +675,34 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                 <ul class="dropdown-menu slidedown">
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-refresh fa-fw"></i> Refresh
+                                            <i class="fa fa-refresh fa-fw"></i>Refresh
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-check-circle fa-fw"></i> Available
+                                            <i class="fa fa-check-circle fa-fw"></i>Available
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-times fa-fw"></i> Busy
+                                            <i class="fa fa-times fa-fw"></i>Busy
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-clock-o fa-fw"></i> Away
+                                            <i class="fa fa-clock-o fa-fw"></i>Away
                                         </a>
                                     </li>
                                     <li class="divider"></li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-sign-out fa-fw"></i> Sign Out
+                                            <i class="fa fa-sign-out fa-fw"></i>Sign Out
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- /.panel-heading -->
+
                         <div class="panel-body">
                             <ul class="chat">
                                 <li class="left clearfix">
@@ -848,7 +713,7 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                         <div class="header">
                                             <strong class="primary-font">Jack Sparrow</strong>
                                             <small class="pull-right text-muted">
-                                                <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                                <i class="fa fa-clock-o fa-fw"></i>12 mins ago
                                             </small>
                                         </div>
                                         <p>
@@ -863,7 +728,7 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                     <div class="chat-body clearfix">
                                         <div class="header">
                                             <small class=" text-muted">
-                                                <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
+                                                <i class="fa fa-clock-o fa-fw"></i>13 mins ago</small>
                                             <strong class="pull-right primary-font">Bhaumik Patel</strong>
                                         </div>
                                         <p>
@@ -879,7 +744,7 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                         <div class="header">
                                             <strong class="primary-font">Jack Sparrow</strong>
                                             <small class="pull-right text-muted">
-                                                <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
+                                                <i class="fa fa-clock-o fa-fw"></i>14 mins ago</small>
                                         </div>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
@@ -893,7 +758,7 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                     <div class="chat-body clearfix">
                                         <div class="header">
                                             <small class=" text-muted">
-                                                <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
+                                                <i class="fa fa-clock-o fa-fw"></i>15 mins ago</small>
                                             <strong class="pull-right primary-font">Bhaumik Patel</strong>
                                         </div>
                                         <p>
@@ -903,7 +768,7 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                 </li>
                             </ul>
                         </div>
-                        <!-- /.panel-body -->
+
                         <div class="panel-footer">
                             <div class="input-group">
                                 <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
@@ -914,15 +779,33 @@ You can then use a database like MongoDB with Mongoose (for modeling) to provide
                                 </span>
                             </div>
                         </div>
-                        <!-- /.panel-footer -->
+
                     </div>
-                    <!-- /.panel .chat-panel -->
+                    <!--End Chat Panel Example-->
                 </div>
-                <!-- /.col-lg-4 -->
             </div>
-            <!-- /.row -->
+
+
+         
+
+
         </div>
-        <!-- /#page-wrapper -->
+        <!-- end page-wrapper -->
 
     </div>
-    <!-- /#wrapper -->
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/plugins/pace/pace.js"></script>
+    <script src="assets/scripts/siminta.js"></script>
+    <!-- Page-Level Plugin Scripts-->
+    <script src="assets/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/plugins/morris/morris.js"></script>
+    <script src="assets/scripts/dashboard-demo.js"></script>
+
+</body>
+
+</html>
