@@ -5,12 +5,11 @@ Author: http://binarytheme.com
  Share Us if You Like our work 
  Enjoy Our Codes For Free always.
 ======================================*/
-
 /* user image section */
 .user-section {
     margin-top:20px;
     font-size:22px;
-    background-color:rgb(83, 163, 163);
+    background-color:whitesmoke;
 }
 .user-section-inner {
     height: 65px;
@@ -39,7 +38,7 @@ margin-bottom: 0px
 }
 .user-text-online {
     font-size:18px;
-    color:#fff
+    color:#steelblue;
 }
 .user-circle-online {
     width: 15px!important;
@@ -51,21 +50,24 @@ margin-bottom: 0px
     background-color:rgba(74, 72, 126, 0);
 }
 .navbar-top-links  .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background-color: #75C5B8;
+    background-color: whitesmoke;
 }
 .navbar-top-links > li > a {
-color: #FFFFFF;
+color: steelblue;
+}
+.navbar-default .navbar-brand {
+    color: steelblue;
 }
 .nav > li > a {
 padding: 20px 15px;
 }
 #side-menu {
-    background-color:#04B173;
+    background-color:whitesmoke;
 }
 
  #side-menu a {
-            color:#fff;
-           border-bottom: 1px solid #84B899 !important;
+            color:steelblue;
+           border-bottom: 1px solid #337ab7 !important;
            height: 55px;
         }
         .selected {
@@ -92,7 +94,7 @@ padding: 20px 15px;
 /* tap nvbar Section */
 
 #navbar {
-    background-color:rgb(83, 163, 163);
+    background-color:whitesmoke;
 }
 
 .navbar-brand {
@@ -124,6 +126,11 @@ margin-right: -24px;
 .navbar-default {
 border-color: #27A6BE;
 }
+.panel-primary>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+} 
 /*media queries*/
 
 @media(min-width:768px) 
