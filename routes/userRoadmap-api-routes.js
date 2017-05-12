@@ -26,6 +26,18 @@ module.exports = function(app) {
   });
 
 
+//deletes link from roadmap
+  app.delete("/api/userRoadmap/:id", function(req, res) {
+    db.UserRoadmap.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbUserRoadmap) {
+      res.json(dbUserRoadmap);
+    });
+  });
+
+
 
 
 
