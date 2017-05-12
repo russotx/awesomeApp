@@ -11,18 +11,7 @@ module.exports = function(sequelize, DataTypes) {
 	},
 
 
-	{
-
-		classMethods: {
-        	associate: function(models) {
-
-          	AllResources.hasMany(models.UserLinks, models.Tags{
-            	onDelete: "cascade"
-          });
-        }
-      }
-
-  	}
+	
 
 
 	);
