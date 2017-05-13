@@ -16,40 +16,40 @@ $(function() {
 });
 
 //jQueryUI function for autocomplete
-$(function() {
-    $("#userTopic").autocomplete({
-        source: availableTags
-    });
-});
+// $(function() {
+//     $("#userTopic").autocomplete({
+//         source: availableTags
+//     });
+// });
 
-var availableTags = [
-    "ActionScript",
-    "AppleScript",
-    "Asp",
-    "BASIC",
-    "C",
-    "C++",
-    "Clojure",
-    "COBOL",
-    "ColdFusion",
-    "Erlang",
-    "Express",
-    "Fortran",
-    "Groovy",
-    "Haskell",
-    "HTML",
-    "Java",
-    "JavaScript",
-    "jQuery",
-    "Lisp",
-    "Node.js",
-    "Perl",
-    "PHP",
-    "Python",
-    "Ruby",
-    "Scala",
-    "Scheme"
-];
+// var availableTags = [
+//     "ActionScript",
+//     "AppleScript",
+//     "Asp",
+//     "BASIC",
+//     "C",
+//     "C++",
+//     "Clojure",
+//     "COBOL",
+//     "ColdFusion",
+//     "Erlang",
+//     "Express",
+//     "Fortran",
+//     "Groovy",
+//     "Haskell",
+//     "HTML",
+//     "Java",
+//     "JavaScript",
+//     "jQuery",
+//     "Lisp",
+//     "Node.js",
+//     "Perl",
+//     "PHP",
+//     "Python",
+//     "Ruby",
+//     "Scala",
+//     "Scheme"
+// ];
 
 //Function for jqueryUI dialog widget
 $("#dialog").dialog({ autoOpen: false });
@@ -72,9 +72,9 @@ $("#submit").on('click', function(e) {
     $(".days").checkboxradio("refresh");
 
     userTopic = $("#userTopic").val();
-    //console.log(userTopic);
+    console.log(userTopic);
     $("#userTopic").val("");
 
     //Close the dialog box
-    $("#dialog").dialog("close");
+    $("#close-dialog").dialog("close");
 }); //end #submit click event handler
