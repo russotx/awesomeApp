@@ -101,8 +101,59 @@ height: 100%;
 
 
 
+/*=========================Roadmap CSS ==================================*/
 
+.roadmap {
+	height: 400px;
+	width: 300px;
+	position: relative;
+	background:
+	linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+	linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+	linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+	linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+	linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+	linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+	background-color: #131313;
+	background-size: 20px 20px;
+	overflow: scroll;
 
+}
 
-
+#vert-line:after {
+    content: '';
+    display: block;
+    height: 100vh;
+    width: 1px;
+    background: white;
+    left: 50%;
+    position: absolute;
+    top: 0px;
+}
 	
+.modules {
+	z-index: 1;
+	left: 50%;
+	list-style-type: none;
+	background: ;
+}
+
+.modules > li {
+	border: 2px dashed black;
+	box-shadow: inset 0 -1px 0 0 #046ca3, inset 0 1px 0 0 #046ca3, 0 1px 0 0 #046ca3, 0 -1px 0 0 #046ca3;
+	border-radius: 50%;
+	margin: 20% auto auto 17%;
+	height: 100px;
+	width: 100px;
+	position: relative;
+	background-color: white;
+	z-index: 2;
+}
+
+.modules > li > img {
+	height: 50%;
+	width: 50%;
+	position: absolute;
+	top: 20%;
+	left: 25%;
+}
