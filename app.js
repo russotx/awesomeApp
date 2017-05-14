@@ -9,14 +9,21 @@ var session = require("express-session");
 
 
 
+
+var index = require('./routes/html-routes');
+var users = require('./routes/api-routes');
+
+
 var app = express();
+
+// Setting up port and requiring models for syncing
+// var PORT = process.env.PORT || 8080;
 
 // view engine setup
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({
-    defaultLayout: "main"
-}));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
 app.set("view engine", "handlebars");
 
 
@@ -27,6 +34,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 app.use(session({
@@ -45,6 +53,10 @@ var apiR = require('./routes/api-routes');
 app.use('/', htmlR);
 app.use('/', apiR);
 
+
+
+
+console.log("")
 
 
 module.exports = app;

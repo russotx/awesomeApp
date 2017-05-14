@@ -1,19 +1,13 @@
 $(document).ready(function() {
-  console.log("login.js");
   // Getting references to our form and inputs
-  var emailInput = $("#exampleInputEmail1");
-  var passwordInput = $("#exampleInputPassword1");
+  var loginForm = $("form.login");
+  var emailInput = $("input#email-input");
+  var passwordInput = $("input#password-input");
 
-
-  $(document).on("keydown",function(e){
-
-   var keyCode = e.which || e.keyCode;
-   if(keyCode == 13) // enter key code
-   {
-      console.log(emailInput.val().trim());
-      console.log(passwordInput.val().trim());
-
-
+  // When the form is submitted, we validate there's an email and password entered
+  loginForm.on("submit", function(event) {
+    event.preventDefault();
+    console.log("clicked");
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -28,9 +22,7 @@ $(document).ready(function() {
     emailInput.val("");
     passwordInput.val("");
 
-   }
-
-});
+  });
 
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
@@ -39,12 +31,15 @@ $(document).ready(function() {
       email: email,
       password: password
     }).then(function(data) {
-      console.log(data);
+
+
       window.location.replace(data);
       // If there's an error, log the error
     }).catch(function(err) {
       console.log(err);
     });
-  }
+
+  };
 
 });
+
