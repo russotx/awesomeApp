@@ -1,8 +1,8 @@
-var db = require("../models");
+const db = require("../models");
 
 module.exports = function(app) {
 
-//gets UserRoadmap for a User
+  //gets UserRoadmap for a User
   app.get("/api/userRoadmap", function(req, res) {
     var query = {};
     if (req.query.user_id) {
@@ -17,16 +17,14 @@ module.exports = function(app) {
     });
   });
 	
-
-//Adds new links to roadmap
-   app.post("/api/userRoadmap", function(req, res) {
+  //Adds new links to roadmap
+  app.post("/api/userRoadmap", function(req, res) {
     db.UserRoadmap.create(req.body).then(function(dbUserRoadmap) {
       res.json(dbUserRoadmap);
     });
   });
 
-
-//deletes link from roadmap
+  //deletes link from roadmap
   app.delete("/api/userRoadmap/:id", function(req, res) {
     db.UserRoadmap.destroy({
       where: {
@@ -36,9 +34,4 @@ module.exports = function(app) {
       res.json(dbUserRoadmap);
     });
   });
-
-
-
-
-
 };
