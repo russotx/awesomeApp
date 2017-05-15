@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style type="text/css">
+    .row > div {
+        margin-bottom: 15px;
+    }
+    
+    .header {
+        min-height: 90px;
+    }
+    
+    .footer {
+        min-height: 60px;
+    }
+    
+    .header,
+    .footer {
+        background: white;
+    }
+    
+    .content {
+        min-height: 300px;
+        background: #dbdfe5;
+    }
+    
+    .content.bg-alt {
+        background: #b4bac0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="header"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="content">
+                    <ul id="global-resources">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="content bg-alt">
+                    <ul id="roadmap">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="email">Name</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="link">link</label>
+                            <input type="url" class="form-control" id="link">
+                        </div>
+                        <div class="form-group">
+                            <label for="difficulty">difficulty</label>
+                            <input type="text" class="form-control" id="difficulty">
+                        </div>
+                        <div class="form-group">
+                            <label for="tag">tag</label>
+                            <input type="text" class="form-control" id="tag">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
