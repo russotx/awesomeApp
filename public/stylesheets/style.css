@@ -1,86 +1,328 @@
 /* this adjusts width of input field for email and password log-in on front page
    and adjusts position of input fields to center of screen */
+
 .form-control {
-	position: relative;
-	left: 50%;
-	width: 30%;
-	transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+    width: 30%;
+    transform: translateX(-50%);
 }
+
 
 /* text color for message that says we will never share user's email*/
+
 #emailHelp {
-	color: white;
+    color: white;
+}
+
+
+/* dividing line between front page image and email log-in*/
+
+.intro-divider {
+    width: 50%;
+}
+
+#inputTitle,
+#inputLink,
+#inputTags {
+    width: 100%;
+}
+
+#difficulty.form-control {
+	position: relative;
+	width: 59%;
+	left: 33%;
+	
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.42;
+    border-radius: 15px;
+}
+
+.panel {
+border: 1px solid #fff !important;
+}
+
+/*=======================PLANNER==============================*/
+
+
+#planner {
+  height: 100%;
+  /*background: #e3e3e0;*/
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: 0;
+}
+
+#accordion {
+    width: 300px;
+    margin: 50px auto;
+}
+
+#accordion .ui-accordion-content {
+    width: 100%;
+    background-color: #f3f3f3;
+    color: #777;
+    font-size: 10pt;
+    line-height: 16pt;
+}
+
+#accordion .ui-accordion-content > * {
+    margin: 0;
+    padding: 20px;
+}
+
+#accordion .ui-accordion-content a {
+    color: #777;
+}
+
+#accordion .ui-accordion-header a {
+    color: #fff;
+    line-height: 42px;
+    display: block;
+    font-size: 12pt;
+    width: 100%;
+    text-indent: 10px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(250, 250, 250, .2);
+}
+
+#accordion .ui-accordion-header {
+    background-color: #fa9300;
+    background-image: -moz-linear-gradient(top, #fa9300 0%, #dc621e 100%);
+    /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fa9300), color-stop(100%, #dc621e));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #fa9300 0%, #dc621e 100%);
+    /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, #fa9300 0%, #dc621e 100%);
+    /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top, #fa9300 0%, #dc621e 100%);
+    /* IE10+ */
+    background-image: linear-gradient(to bottom, #fa9300 0%, #dc621e 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fa9300', endColorstr='#dc621e', GradientType=0);
+    /* IE6-9 */
+    margin: 0px;
+}
+
+ /*Planner Dialog*/
+
+.ui-dialog {
+    background-color: white;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: .2em;
+    border: 1px solid black;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    border: 1px;
+    display: none;
+}
+
+.ui-dialog .ui-dialog-content {
+    border: 0;
+    padding: 20px;
+    font-size: 18px;
+    color: #CAAD75;
+    background-color: #white;
+    overflow: auto;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    margin-top: .5em;
+    padding: .3em 1em .5em .4em;
+    background-color: #846733;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: right;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    margin: .5em .4em .5em 0;
+    cursor: pointer;
+}
+
+.ui-dialog .ui-resizable-se {
+    width: 12px;
+    height: 12px;
+    right: -5px;
+    bottom: -5px;
+    background-position: 16px 16px;
+}
+
+
+.ui-autocomplete-input {
+    color: black;
+}
+
+legend {
+    color: black;
+}
+
+.days-label {
+    color: black;
+    display: block;
+    border: 1px solid black;
+    font-size: 1em;
+    border-radius: 3px;
+    color: rbg(69, 69, 69);
+    text-decoration: none;
+    background-color: #ededed;
 
 }
-/* dividing line between front page image and email log-in*/
-.intro-divider {
-	width: 50%;
+
+.days-label:hover {
+	background-color: #007fff;
 }
+
+.days-label[type=checkbox] + label:checked {
+	background-color: #007fff;
+}
+
+
 
 /*===================SIGN-UP.HANDLEBARS CSS=================================*/
-.sign-up {
-	background: url(../images/photo-one.jpeg) no-repeat center center;
-	background-size: cover;
-	text-align: left;
-	height: 100%;
-}
-/*=========================FLIP CARD CSS ==================================*/
-@import url(//fonts.googleapis.com/css?family=Lato:400,900);
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
+.sign-up {
+    background: url(../images/photo-one.jpeg) no-repeat center center;
+    background-size: cover;
+    text-align: left;
+    height: 100%;
+}
+
+
+/*=========================FLIP CARD CSS ==================================*/
+
+
+/*@import url(//fonts.googleapis.com/css?family=Lato:400,900);*/
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 .info-card {
     float: left;
-	margin: 10px;
-	-webkit-perspective: 600px;
+    margin: 10px;
+    -webkit-perspective: 600px;
 }
 
-.front, .back {
-	background: #FFF;
-	border-radius: 10px;
-	transition: -webkit-transform 1s;
-	-webkit-transform-style: preserve-3d;
-	-webkit-backface-visibility: hidden;
-	border: 1px solid black;
+.front,
+.back {
+    background: #FFF;
+    border-radius: 10px;
+    transition: -webkit-transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    border: 1px solid black;
 }
 
 .front {
-	overflow: hidden;
-	width: 400px;
-	height: 150px;
-	position: absolute;
-	z-index: 1;
-	background-color: steelblue;
-	text-align: center;
-	color: white;
+    overflow: hidden;
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+    background-color: steelblue;
+    text-align: center;
+    color: white;
 }
 
 .back {
-	padding: 20px;
-	padding-top: 0px;
-	width: 400px;
-	height: 150px;
-	-webkit-transform: rotateY(-180deg);
-	overflow: scroll;
+    padding: 20px;
+    padding-top: 0px;
+    width: 400px;
+    height: 150px;
+    -webkit-transform: rotateY(-180deg);
+    overflow: scroll;
 }
 
 .info-card:hover .back {
-	-webkit-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
 }
 
 .info-card:hover .front {
-	-webkit-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 .card-image {
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
 }
-/*=====================================================================*/
+
+
+/*=========================Roadmap CSS ==================================*/
+
+.roadmap {
+	/*height: 400px;*/
+	width: 281px;
+	/*position: relative;*/
+	/*background:
+	linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+	linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+	linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+	linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+	linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+	linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);*/
+	/*background-color: #337ab7;*/
+	/*background-size: 20px 20px;*/
+	/*overflow: scroll;*/
+}
+
+#vert-line:after {
+    content: '';
+    display: block;
+    height: 100vh;
+    width: 1px;
+    background: white;
+    left: 50%;
+    position: absolute;
+    top: 0px;
+}
+
+.modules {
+    z-index: 1;
+    left: 50%;
+    list-style-type: none;
+    background: ;
+}
+
+.modules > li {
+    border: 2px dashed black;
+    box-shadow: inset 0 -1px 0 0 #046ca3, inset 0 1px 0 0 #046ca3, 0 1px 0 0 #046ca3, 0 -1px 0 0 #046ca3;
+    border-radius: 50%;
+    margin: 20% auto auto 17%;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    background-color: white;
+    z-index: 2;
+}
+
+.modules > li > img {
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 25%;
 
 
 
-
-
-
-
-	

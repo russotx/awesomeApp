@@ -1,4 +1,5 @@
 $(document).ready(function() {
+<<<<<<< HEAD
   console.log("login.js");
   // Getting references to our form and inputs
   var emailInput = $("#exampleInputEmail1");
@@ -12,6 +13,7 @@ $(document).ready(function() {
    {
       console.log(emailInput.val().trim());
       console.log(passwordInput.val().trim());
+
 
 
     var userData = {
@@ -33,18 +35,27 @@ $(document).ready(function() {
 });
 
 
+
+
+
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(email, password) {
     $.post("/api/login", {
       email: email,
       password: password
     }).then(function(data) {
-      console.log(data);
+
+
+
       window.location.replace(data);
       // If there's an error, log the error
     }).catch(function(err) {
       console.log(err);
     });
+
   }
 
 });
+
+
+
