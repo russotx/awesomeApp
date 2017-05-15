@@ -1,21 +1,16 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var passport = require('./config/passport');
-var session = require("express-session");
+
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+
+const index = require('./routes/index');
+const users = require('./routes/users');
 
 
-
-
-// var index = require('./routes/html-routes');
-// var users = require('./routes/api-routes');
-
-
-
-var app = express();
+const app = express();
 
 // view engine setup
 var exphbs = require("express-handlebars");

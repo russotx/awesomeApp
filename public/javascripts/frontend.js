@@ -1,13 +1,3 @@
-
-// FUNCTIONS RUNNING IN BROWSER
-
-/***************************************** 
- * 
- *                  GLOBALS
- * 
- ******************************************/
-const userID = noIdea;
-
 /*__________ THE RESOURCE PROTOTYPE _________
 --When created as a global resource the resource will have properties for
 id:, name:, link:, difficulty:, tags:, and popularity:.
@@ -164,6 +154,62 @@ const topic = {
 //   {id:5 , topic:'css' , notes:, topicPos:3}
 // ]
 
+/*________ THE SIDEBAR WIH THE GLOBAL RESOURCES ________ */
+
+const sideBar = {
+  // allResources is an object containing resource objects
+  // allResources property names match the corresponding resource object's id
+  // making it an object of objects enables easier lookup by id and MUCH faster than an array
+  // the jsonArray will look like [{id: ,link: ,difficulty: ,popularity: ,tags: },...]
+  allResources : {},
+  // *Trigger This* immediately on page request
+  makeAllResources : function(jsonArray){
+    jsonArray.forEach((resObj) => {
+      this.allResources[resObj.id] = Object.create(resource).init(resObj);
+    });
+    // return this for chaining
+    return this;
+  },
+  // *Trigger This* when topic clicked
+  renderByTopic : function(activeTopic){
+    const sideBarList = $('#global-resources');
+    resToSort = [];
+    for (var globalRes in allResources){
+      // parse the tag string by spaces and check if the active topic is one of the tags
+      if (globalRes.tags.split(' ').indexOf(activeTopic) != -1){
+        // add the resource to an array, we still need to sort by popularity!
+        resToSort.push(globalRes);
+      }
+    };
+    // sort the resToSort array by popularity
+    resToSort.sort((resA,resB) => {
+      if (resA.popularity > resB.popularity){
+        return 1;
+      } else if (resA.popularity < resB.popularity) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+    // render every resource in the resToSort array
+    sideBarList.html('');
+    resToSort.forEach((globalRes)=>{globalRes.render(sideBarList)});
+  },
+  // *trigger This* when user adds a new resource to global resources.
+  newGlobaleResource : function(newResource){
+    $.post('/api/allResources',newResource,function(data,status){
+      // send object to backend
+      // sequelize updates the DB with the object we send  
+      console.log(data);  
+    })
+    .done(newResource.render($('#global-resources'),'prepend'))
+    .fail(function(data){
+      alert('There was an error loading your new resource.');
+      cosole.log(data);
+    }); 
+  }
+}
+
 /* _________ CURRICULUM OBJECT ____________ */
 // each topic is an object containing resources which are objects
 // resources have all the properties of their prototype + an id, notes, 
@@ -224,62 +270,34 @@ const curriculum = {
     });
   }
 };
+/********************************************************
+ * 
+ * 
+ *    ___THIS IS WHERE THE APP ACTION HAPPENS____
+ * 
+ * 
+ *********************************************************/
 
-/*________ THE SIDEBAR WIH THE GLOBAL RESOURCES ________ */
+// loading the resources doesn't depend on page content
+getGlobalResources(sideBar.makeAllResources);
+// everything below relies on the page content being ready
+$(document).ready(function(){
+  
+  const userID = noIdea;
+  getUserCurriculum(curriculum.renderTopics);
 
-const sideBar = {
-  // allResources is an object containing resource objects
-  // allResources property names match the corresponding resource object's id
-  // making it an object of objects enables easier lookup by id and MUCH faster than an array
-  // the jsonArray will look like [{id: ,link: ,difficulty: ,popularity: ,tags: },...]
-  allResources : {},
-  makeAllResources : function(jsonArray){
-    jsonArray.forEach((resObj) => {
-      this.allResources[resObj.id] = Object.create(resource).init(resObj);
-    });
-    // return this for chaining
-    return this;
-  },
-  renderByTopic : function(activeTopic){
-    const sideBarList = $('#globalResources');
-    resToSort = [];
-    for (var globalRes in allResources){
-      // parse the tag string by spaces and check if the active topic is one of the tags
-      if (globalRes.tags.split(' ').indexOf(activeTopic) != -1){
-        // add the resource to an array, we still need to sort by popularity!
-        resToSort.push(globalRes);
-      }
-    };
-    // sort the resToSort array by popularity
-    resToSort.sort((resA,resB) => {
-      if (resA.popularity > resB.popularity){
-        return 1;
-      } else if (resA.popularity < resB.popularity) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
-    // render every resource in the resToSort array
-    sideBarList.html('');
-    resToSort.forEach((globalRes)=>{globalRes.render(sideBarList)});
-  },
-  // trigger when user adds a new resource to global resources.
-  newGlobaleResource : function(newResource){
-    $.post('/api/allResources',newResource,function(data,status){
-      // send object to backend
-      // sequelize updates the DB with the object we send  
-      console.log(data);  
-    })
-    .done(newResource.render($('#globalResources'),'prepend'))
-    .fail(function(data){
-      alert('There was an error loading your new resource.');
-      cosole.log(data);
-    }); 
-  }
+
+});
+
+function getGlobalResources(callback){
+  $.get('/api/resources',function(req,res){
+    callback(res);
+  });
 }
 
-
-
-
+function getUserCurriculum(callback){
+  $.get('/routetogetuserdata',function(req,res){
+    callback(res);
+  });
+}
  
