@@ -1,0 +1,61 @@
+
+body {
+  background-color:black;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+
+.module {
+  border: 3px dashed black;
+  box-shadow: inset 0 -1px 0 0 #046ca3, inset 0 1px 0 0 #046ca3, 0 1px 0 0 #046ca3, 0 -1px 0 0 #046ca3;
+  border-radius: 50%;
+  display: block;
+  margin: 3% auto 3% auto;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  background-color: white;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 50px;
+  top: 40px;
+}
+
+
+
+#htmlModal {
+  position: absolute;
+  top: 3%;
+  left: 60%;
+}
+
+#cssModal {
+  position: absolute;
+  top: 30%;
+  left: -65%;
+  overflow: visible;
+}
+
+#jqueryModal {
+  position: absolute;
+  top: 70%;
+  left: 61%;
+  overflow: visible;
+}
+
+#javascriptModal {
+  position: absolute;
+  top: 100%;
+  left: -60%;
+  overflow: visible;
+}
