@@ -31,11 +31,13 @@ const resource = {
     // ?? add bootstrap classes if needed 
     let card = $('<li>').addClass(this.id);
     let cardFront = $('<div>').addClass('resource front').html(this.name);
-    const deleteButton = $('p').html('&#10006;');
+    let deleteButton = $('p').html('&#10006;');
     cardFront.append(deleteButton).addClass('delete-button');
     let cardBack = $('<div>').addClass('resource back');
     let cardLink = $('<h4>').addClass('cardLink').html(this.link);
+    let cardDiff = $('<h5>').addClas('cardDiff').html(this.difficulty);
     let cardNotes = $('<p>').addClass('cardNotes').html(this.notes);
+    cardFront.append(deleteButton).append(cardDiff);
     cardBack.append(cardLink).append(cardNotes);
     card.append(cardFront).append(cardBack);
     if ((position) && (position == 'prepend')){
@@ -116,7 +118,7 @@ const topic = {
     if (dragNdropRes.tags.split(' ').indexOf(activeTopic) == -1) {
       dragNdropRes.tags += activeTopic;
     }
-    $.post('/api/userRoadmap',dataToPost,function(data,status){
+    $.post('/api/userRoadmap'+userId,dataToPost,function(data,status){
       // send the post to sequelize
     })
     .done(console.log('successful update to the database.'))
@@ -128,7 +130,7 @@ const topic = {
   // *Trigger This* when the user delete's a resource
   delResource : function(resToDelete){
     // remove a resource from this.topicResources object
-    $.delete('/api/userRoadmap/',resToDelete,function(data,status){
+    $.delete('/api/userRoadmap/'+userId,resToDelete,function(data,status){
       // send to sequelize to delete the resource from the DB
     })
     .done(function(resToDelete){
