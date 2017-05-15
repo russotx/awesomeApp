@@ -21,9 +21,7 @@ limitations under the License.*/
 
 /* ------------------------------- */
 
- body {
-    background-color: #f8f8f8;
-}
+ 
 
 /* Wrappers */
 
@@ -36,7 +34,7 @@ limitations under the License.*/
 }
 
 #page-wrapper {
-    padding: 0 15px;
+    /*padding: 0 15px;*/
     min-height: 568px;
      background-color:rgb(209, 212, 216);
 }
