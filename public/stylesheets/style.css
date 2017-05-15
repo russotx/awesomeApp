@@ -67,7 +67,14 @@ border: 1px solid #fff !important;
 
 #accordion {
     width: 300px;
-    margin: 50px auto;
+    /*margin-right: 50%;*/
+    margin-left: 50%;
+    margin-top: 2%;
+}
+#opener {
+    margin-left: 75%;
+}
+
 }
 
 #accordion .ui-accordion-content {
@@ -285,6 +292,7 @@ legend {
 	/*background-color: #337ab7;*/
 	/*background-size: 20px 20px;*/
 	/*overflow: scroll;*/
+    margin-left: 5%;
 }
 
 #vert-line:after {
