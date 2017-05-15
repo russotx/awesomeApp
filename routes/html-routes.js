@@ -10,9 +10,11 @@ router.get('/', function(req, res) {
 	res.render('landing', { title: 'Login' });
 });
 
+
 router.get('/forms', function(req, res) {
   	res.render('forms', { title: 'forms' });
 });
+
 
 router.get('/signup', function(req, res) {
   	res.render('signup', { title: 'signup' });
