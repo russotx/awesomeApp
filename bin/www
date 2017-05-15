@@ -49,9 +49,8 @@ function normalizePort(val) {
   return false;
 }
 
-/**
- * Event listener for HTTP server "error" event.
- */
+/* Event listener for HTTP server "error" event.*/
+ 
 
 function onError(error) {
   if (error.syscall !== 'listen') {
@@ -77,9 +76,8 @@ function onError(error) {
   }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
+/* Event listener for HTTP server "listening" event.*/
+ 
 
 function onListening() {
   var addr = server.address();
@@ -89,6 +87,6 @@ function onListening() {
   debug('Listening on ' + bind);
 
   console.log("App running on port " + port);
-
+};
 
 
