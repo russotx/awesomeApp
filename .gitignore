@@ -38,3 +38,6 @@ jspm_packages
 
 # MacOS
 .DS_Store
+
+#VSCode debugging files
+.VSCode/
