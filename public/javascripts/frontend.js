@@ -172,7 +172,7 @@ const sideBar = {
   },
   // *Trigger This* when topic clicked
   renderByTopic : function(activeTopic){
-    const sideBarList = $('#globalResources');
+    const sideBarList = $('#global-resources');
     resToSort = [];
     for (var globalRes in allResources){
       // parse the tag string by spaces and check if the active topic is one of the tags
@@ -202,7 +202,7 @@ const sideBar = {
       // sequelize updates the DB with the object we send  
       console.log(data);  
     })
-    .done(newResource.render($('#globalResources'),'prepend'))
+    .done(newResource.render($('#global-resources'),'prepend'))
     .fail(function(data){
       alert('There was an error loading your new resource.');
       cosole.log(data);
