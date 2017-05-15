@@ -5,12 +5,6 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
             <!-- navbar-header -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="/dashboard">
                     <h1>SyllaCode</h1>
                 </a>
@@ -18,59 +12,14 @@
             <!-- end navbar-header -->
             <!-- navbar-top-links -->
             <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                   <!-- dropdown alerts-->
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i>
-                                    <span class="pull-right text-muted small"></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i>
-                                    <span class="pull-right text-muted small"></span>
-                                </div>
-                            </a>
-                        </li>
-                        
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i>
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong></strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+                
                     <!-- end dropdown-alerts -->
-                </li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-3x"></i>
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
-                        </li>
-                        <li class="divider"></li>
                         <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
@@ -80,7 +29,6 @@
             </ul>
           </nav>
         <!-- end navbar top -->
-
         <!-- navbar side -->
         <nav class="navbar-default navbar-static-side" role="navigation">
             <!-- sidebar-collapse -->
@@ -90,15 +38,9 @@
                     <li>
                         <!-- user image section-->
                         <div class="user-section">
-                            <div class="user-section-inner">
-                                <img src="images/user.jpg" alt="Picture of you">
-                            </div>
                             <div class="user-info">
-                    
                                 <h4> {{email}}</h4>
                                 <h5> Member since {{date}}</h5>
-                                           
-                
                                 <div class="user-text-online">
                                     <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
                                 </div>
@@ -106,22 +48,6 @@
                         </div>
                         <!--end user image section-->
                     </li>
-                    <li class="sidebar-search">
-                        <!-- search section-->
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                        <!--end search section-->
-                    </li>
-                    <li class="selected">
-                        <a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
-                    </li>              
-                               
                 </ul>
                 <!-- end side-menu -->
             </div>
@@ -132,30 +58,19 @@
      <div id="page-wrapper">
             <div class="row">
                 <!-- Page Header -->
-                <div class="col-xs-12">
-                    <h1 class="page-header">Dashboard</h1>
-                </div>
                 <!--End Page Header -->
             </div>
-
             <div class="row">
                 <!-- Welcome -->
                 <div class="col-xs-12">
-                    <div class="alert alert-info">
-                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back! <b></b>
- 
-                    </div>
                 </div>
                 <!--end  Welcome -->
             </div>
-
-
             <div class="row">
                 <!--quick info section -->
                 <div class="col-xs-4">
                     <div class="alert alert-success text-center">
                         <i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;Resources
-
                     </div>
                 </div>
                 <div class="col-xs-4">
@@ -203,9 +118,7 @@
     </div>
       <div class="form-group row">
         <label for="difficulty" class="col-sm-2 col-form-label">&nbsp;Difficulty</label>
-
             <select class="form-control" id="difficulty">
-
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -234,56 +147,6 @@
 
                 </div> <!-- closes Roadmap column -->
 <!--===============CLOSE ROADMAP COLUMN====================================-->
-            
-    <!--============ WEEKLY PLANNER COLUMN ============================= -->
-
-    <div id="planner" class="col-xs-4">
-                
-         {{!-- <h2 class="text-center"></h2> --}}
-
-          <!-- Pop-up dialog for add topic button -->
-            <div id="dialog" title="Add Topic">
-              <form>
-                <input id="userTopic" type="text">  
-                <fieldset>
-                  <legend>Select days:</legend>
-                  <label class="days-label text-center" for="checkbox-1"><input class="days" type="checkbox" value="sunday" id="checkbox-1">Sunday</label>
-                  <label class="days-label text-center" for="checkbox-2"><input class="days" type="checkbox" value="monday" id="checkbox-2">Monday</label>
-                  <label class="days-label text-center" for="checkbox-3"><input class="days" type="checkbox" value="tuesday" id="checkbox-3">Tuesday</label>
-                  <label class="days-label text-center" for="checkbox-4"><input class="days" type="checkbox" value="wednesday" id="checkbox-4">Wednesday</label>
-                  <label class="days-label text-center" for="checkbox-5"><input class="days" type="checkbox" value="thursday" id="checkbox-5">Thursday</label>
-                  <label class="days-label text-center" for="checkbox-6"><input class="days" type="checkbox" value="friday" id="checkbox-6">Friday</label>
-                  <label class="days-label text-center"  for="checkbox-7"><input class="days" type="checkbox" value="saturday" id="checkbox-7">Saturday</label>
-                  
-                </fieldset>
-                <input id="submit" type="submit">
-                <button id="close-dialog" style="color: #2b3e50;">Close</button>
-              </form>
-            </div>
-
-
-        <!-- Accordion to hold content for each day of the week -->
-        <div id="accordion" >
-            <h3 id="sunday"><a href="#">Sunday</a></h3>
-            <div>adding some content</div>
-            <h3 id="monday"><a href="#">Monday</a></h3>
-            <div></div>
-            <h3 id="tuesday"><a href="#">Tuesday</a></h3>
-            <div></div>
-            <h3 id="wednesday"><a href="#">Wednesday</a></h3>
-            <div></div>
-            <h3 id="thursday"><a href="#">Thursday</a></h3>
-            <div></div>
-            <h3 id="friday"><a href="#">Friday</a></h3>
-            <div></div>
-            <h3 id="saturday"><a href="#">Saturday</a></h3>
-            <div></div>
-        </div>
-
-        <br><br>
-
-        <button id="opener" class="btn btn-primary">Add Topic</button>
-    </div> <!--============ CLOSE WEEKLY PLANNER COLUMN================ -->
    </div>
   </div>
  </div>

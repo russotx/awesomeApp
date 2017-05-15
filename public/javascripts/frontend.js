@@ -282,13 +282,13 @@ const curriculum = {
 
 // loading the resources doesn't depend on page content
 getGlobalResources(sideBar.makeAllResources);
+
 // everything below relies on the page content being ready
 $(document).ready(function(){
   
-  const userID = noIdea;
+  
   getUserCurriculum(curriculum.renderTopics);
-
-
+  
 });
 
 function getGlobalResources(callback){
